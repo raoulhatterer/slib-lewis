@@ -1,23 +1,22 @@
 !if $wims_read_parm!=slib_header
  !goto proc
 !endif
+slib_title=Lewis
 
-slib_author=Raoul HATTERER
-slib_example=5678\
-[678,122]\
-[295,180],fr\
-[181,1008,1081,200,201,280]\
-[9880,99120]
+slib_author=Raoul, Hatterer
 
+slib_example=5,3,red,H\
+5,0,blue,V,Text,html\
+5,0,red,V,Text,url\
+3,5,red,V,,html\
+3,5,red,H,,html
 !exit
-
-:proc
 
 !! Adaptation de lewis dans chemfig de Christian Tellechea
 !! source : https://ctan.org/tex-archive/macros/generic/chemfig 
 
 !! \lewis{<n1><n2>...<ni>,<atome>}
-!! où les <n1>. . . <ni> représentent les positions (en multiples de 45°)
+!! où les <n1>. . . <ni> représentent les positions (en multiples de 45°,
 !! désirées autour de l’<atome>. Ces entiers doivent être compris entre 0 et 7.
 !! Si au lieu d’une paire représentée par une ligne, on souhaite deux points,
 !! on fait suivre l’entier par « : ».
@@ -25,4 +24,37 @@ slib_example=5678\
 !! Pour dessiner une lacune, on le fait suivre d’un « | » :
 
 
-slib_out=Raoul
+
+
+:proc
+!distribute items $wims_read_parm into slib_electrons,slib_symbol,slib_scale,slib_option
+
+!default slib_D=H
+slib_w=8
+!default slib_color=black
+
+
+
+
+
+!set slib_H=fpoly black,62,150,75.5,150,75.5,109,124.6,109,124.6,150,138,150,138,50,124.6,50,124.6,100,75.5,100,75.5,50,62,50,62,150
+
+
+
+
+
+slib_out=xrange 0,199\ yrange 0,199\
+rectangle 0,0,199,199,blue\
+$slib_H
+
+!if url iswordof $slib_option or html iswordof $slib_option
+  insdraw_size=200,200
+  !insdraw $slib_out
+  slib_out=$ins_url
+  !if html iswordof $slib_option
+    slib_out=<img src="$ins_url" width="20" alt="Lewis" />
+ !else
+    slib_out=$slib_out,$insdraw_size
+ !endif
+!endif
+
