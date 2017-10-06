@@ -1,0 +1,28 @@
+!if $wims_read_parm!=slib_header
+ !goto proc
+!endif
+
+slib_author=Raoul HATTERER
+slib_example=5678\
+[678,122]\
+[295,180],fr\
+[181,1008,1081,200,201,280]\
+[9880,99120]
+
+!exit
+
+:proc
+
+!! Adaptation de lewis dans chemfig de Christian Tellechea
+!! source : https://ctan.org/tex-archive/macros/generic/chemfig 
+
+!! \lewis{<n1><n2>...<ni>,<atome>}
+!! où les <n1>. . . <ni> représentent les positions (en multiples de 45°)
+!! désirées autour de l’<atome>. Ces entiers doivent être compris entre 0 et 7.
+!! Si au lieu d’une paire représentée par une ligne, on souhaite deux points,
+!! on fait suivre l’entier par « : ».
+!! Si on veut dessiner un électron, il suftit de le faire suivre par un « . ».
+!! Pour dessiner une lacune, on le fait suivre d’un « | » :
+
+
+slib_out=Raoul
