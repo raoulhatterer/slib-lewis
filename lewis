@@ -39,13 +39,17 @@ slib_w=8
 
 !set slib_H=fpoly black,62,150,75.5,150,75.5,109,124.6,109,124.6,150,138,150,138,50,124.6,50,124.6,100,75.5,100,75.5,50,62,50,62,150
 
+!set slib_He=fpoly black,50,150,58,150,58,110,88,110,88,150,96,150,96,52,88,52,88,99,58,99,58,52,50,52,50,150\
+lines black,150,92,150,86,116,86\
+lines black,148,67,148,56\
+lines black,116,95,143,95
 
 
 
 
 slib_out=xrange 0,199\ yrange 0,199\
 rectangle 0,0,199,199,blue\
-$slib_H
+$slib_He
 
 !if url iswordof $slib_option or html iswordof $slib_option
   insdraw_size=200,200
