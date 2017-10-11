@@ -6,7 +6,9 @@ les_zeros=["","0","0.","0:"]
 les_deux=["","2","2.","2:"]
 les_quatres=["","4","4.","4:"]
 les_six=["","6","6.","6:"]
-elements=["H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar"]
+#elements=["H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar"]
+elements=["X","?","K","Ca"]
+
 filename = 'lewis'
 opfile = filename + '.tex'
 with open('lewis.txt', 'r',encoding='utf-8') as fichier_preambule:
