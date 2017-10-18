@@ -33,18 +33,148 @@ slib_example=5,3,red,H\
 slib_w=8
 !default slib_color=black
 
-
-
+!set bezier0=*(1-t)^3+3*
+!set bezier1=*t*(1-t)^2+3*
+!set bezier2=*t^2*(1-t)+
+!set bezier3=*t^3
 
 
 !set slib_H=fpoly black,62,150,75.5,150,75.5,109,124.6,109,124.6,150,138,150,138,50,124.6,50,124.6,100,75.5,100,75.5,50,62,50,62,150
 
+!set slib_P0=116.02407801,85.80804999
+!set slib_P1=116.34536314,77.48566745
+!set slib_P2=117.87146752,71.13437552
+!set slib_P3=120.60239115,66.75417418
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He1=plot green,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=123.36008854,62.41777486
+!set slib_P2=127.18873638,60.2495752
+!set slib_P3=132.08833465,60.2495752
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He2=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=134.92635333,60.2495752
+!set slib_P2=137.67066384,60.81900137
+!set slib_P3=140.32126619,61.95785372
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He3=plot black,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=142.99864229,63.09670607
+!set slib_P2=145.64924464,64.80498459
+!set slib_P3=148.27307323,67.08268928
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He4=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=145.62247088,53.81067923
+!set slib_P2=142.90493413,52.4090148
+!set slib_P3=140.12046298,51.44537051
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He5=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=137.33599183,50.48172622
+!set slib_P2=134.51136003,49.99990407
+!set slib_P3=131.6465676,49.99990407
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He6=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=124.47119963,49.99990407
+!set slib_P2=118.7817754,53.41646111
+!set slib_P3=114.57829491,60.2495752
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He7=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=110.40158818,67.08268928
+!set slib_P2=108.31323482,76.3249141
+!set slib_P3=108.31323482,87.97624966
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He8=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=108.31323482,100.02180333
+!set slib_P2=110.29449314,109.57064224
+!set slib_P3=114.25700978,116.62276639
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He9=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=118.24630018,123.71869256
+!set slib_P2=123.61443927,127.26665564
+!set slib_P3=130.36142706,127.26665564
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He10=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=136.41229707,127.26665564
+!set slib_P2=141.19141342,124.06910867
+!set slib_P3=144.69877612,117.67401471
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He11=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+!set slib_P0=$slib_P3
+!set slib_P1=148.23291258,111.32272278
+!set slib_P2=149.99998082,102.67182514
+!set slib_P3=149.99998082,91.7213218
+!distribute items $slib_P0 into x0,y0
+!distribute items $slib_P1 into x1,y1
+!distribute items $slib_P2 into x2,y2
+!distribute items $slib_P3 into x3,y3
+!set slib_He12=plot red,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3
+
+
+
+
+
+
 !set slib_He=fpoly black,50,150,58,150,58,110,88,110,88,150,96,150,96,52,88,52,88,99,58,99,58,52,50,52,50,150\
-lines black,150,92,150,86,116,86\
-lines black,148,67,148,56\
-lines black,116,95,143,95
+trange 0,1\
+$(slib_He1)\
+$(slib_He2)\
+$(slib_He3)\
+$(slib_He4)\
+line black,148.27307323,67.08268928,148.27307323,55.65036379\
+$(slib_He5)\
+$(slib_He6)\
+$(slib_He7)\
+$(slib_He8)\
+$(slib_He9)\
+$(slib_He10)\
+$(slib_He11)\
+$(slib_He12)
 
+!!plot blue,$[$x0]*(1-t)^3+3*$[$x1]*t*(1-t)^2+3*$[$x2]*t^2*(1-t)+$[$x3]*t^3,$[$y0]*(1-t)^3+3*$[$y1]*t*(1-t)^2+3*$[$y2]*t^2*(1-t)+$[$y3]*t^3 
 
+!!plot red,116.02*(1-t)^3+3*116.35*t*(1-t)^2+3*117.87*t^2*(1-t)+120.6*t^3,85.81*(1-t)^3+3*77.49*t*(1-t)^2+3*71.13*t^2*(1-t)+66.75*t^3 
+!!plot blue,$(116.02 $bezier0 116.35 $bezier1 117.87 $bezier2 120.6 $bezier3),$(85.81 $bezier0 77.49 $bezier1 71.13 $bezier2 66.75 $bezier3) 
 
 
 slib_out=xrange 0,199\ yrange 0,199\
@@ -61,4 +191,4 @@ $slib_He
     slib_out=$slib_out,$insdraw_size
  !endif
 !endif
-
+!!slib_out=$slib_He1 et $slib_He2
